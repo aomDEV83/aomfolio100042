@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aomfolio100042</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <!-- ส่วนหัว -->
+    <header id="home">
+        <div class="container-xl mx-auto">
+            <nav class="flex justify-between items-center bg-[#ffef42]">
+                <p class="font-extrabold text-3xl">aomfolio100042</p>
+                <div class="">
+                    <ul class="font-semibold text-lg flex">
+                        <a href="#home" class="px-6 hover:text-[#52ff42] duration-200">Home</a>
+                        <a href="../html/event.html"><li class="px-6 hover:text-[#52ff42] duration-200">กิจกรรม</li></a>
+                        <a href="../html/portfolio.html" target="_blank"><li class="px-6 hover:text-[#52ff42] duration-200">ผลงาน</li></a>
+                        <a href="../html/story.html" target="_blank"><li class="px-6 hover:text-[#52ff42] duration-200">สตอรี่</li></a>
+                        <a href="#about"><li class="px-6 hover:text-[#52ff42] duration-200">เกี่ยวกับ</li></a>
+                        <li class="px-6 hover:text-[#52ff42] duration-200 cursor-pointer" onclick="modal_contact.showModal()">ติดต่อ</li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ป็อปอัปการติดต่อ -->
+    <dialog id="modal_contact" class="modal">
+        <form method="dialog" class="modal-box">
+            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 outline-none hover:bg-[#ffef42]">✕</button>
+            <h3 class="font-bold text-3xl">ติดต่อ!</h3><hr>
+            <div class="inline-flex flex-col my-5">
+                <span class="flex">
+                    <i class='bx bxl-gmail bx-tada mr-2 text-xl hover:text-red-500 duration-200'></i><p>Email: chaiwichitss4568@gmail.com</p>
+                </span>
+                <span  class="flex">
+                    <i class='bx bx-at bx-tada mr-2 mt-2 text-xl hover:text-green-500 duration-200'></i><p class="my-3">Line-ID: aomchit4568</p>
+                </span>
+                <span class="flex">
+                    <i class='bx bxl-github bx-tada mr-2 text-xl hover:text-gray-500 duration-200'></i><p>Github: https://github.com/aomDEV83</p>
+                </span>
+            </div>
+        </form>
+    </dialog>
+
+    <!-- ส่วนกิจกรรม -->
+    <section id="event">
+        <div class="container-xl mx-auto">
+            <div class="hero text-center">
+                <div class="my-16 py-16" >
+                <h2 class="text-neon text-6xl text-white pb-9">สวัสดีครับ</h2>
+                <h1 class="text-neon text-8xl text-white pb-8">ยินดีต้อนรับ</h1>
+                <p class="text-white text-3xl mt-9">สู่....เว็บไซต์เก็บผลงาน, บันทึกกิจกรรม, เรื่องราวต่างๆ</p>
+                <p class="text-white text-3xl mt-5 mb-9">ของปริญญาตรี มหาวิทยาลัยกรุงเทพธนบุรี</p>
+                </div>
+                <!-- <a href="#seemore"><button class="mt-9 p-4 px-9 text-[#222] text-lg bg-[#ffef42] rounded-xl">เพิ่มเติม</button></a> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ดูเพิ่มเติม -->
+    <section id="seemore" style="height: 600px;">
+        <div class="container mx-auto">
+            <div class="text-center">
+                <h1 class="text-5xl py-9 pb-9">จุดประสงค์ของการพัฒนาเว็บไซต์</h1>
+                <div class="flex">
+                    <div class="flex flex-col py-8">
+                        <p class="text-2xl text-[#505050]">พัฒนาเว็บไซ์นี้ขึ้นมาเพื่อเก็บผลงานการเรียน การศึกษา
+                            บันทึกกิจกรรมต่างๆที่ได้เข้าร่วม
+                            บันทึกเรื่องราวหรือ Story ระหว่างการศึกษา</p>
+                        <img class="rounded-xl mx-auto mt-9" src="../Images/btu-banner.jpg" alt="Story of University" width="320">
+                    </div>
+                    <div class="flex flex-col">
+                        <img class="rounded-full mx-auto my-9" src="../Images/btu-banner.jpg" alt="University Portfolio" width="320">
+                        <p class="text-2xl text-[#505050]">เพื่อเป็นตัวอย่างและแนวทางสำหรับคนที่ต้องการทำ Portfolio หรือ ต้องการมีแฟ้มเก็บผลงานระหว่างที่เรียน
+                            เผื่อเก็บบันทึกข้อมูลต่างๆระหว่างเรียน
+                            และเผื่อที่สามารถนำ portfolio นี้ไปใช้แสดงในการสมัครงานได้</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- เกี่ยวกับฉัน -->
+    <section id="about" class="bg-[#fafafa]">
+        <div class="container mx-auto" style="height: 600px;">
+            <div class="text-center">
+                <h1 class="text-5xl py-9">เกี่ยวกับฉัน</h1>
+                <div class="grid grid-cols-3 gap-8 mt-9">
+                    <div class="py-6 rounded-xl shadow-md hover:scale-110 ease-in duration-300">
+                        <h2 class="text-3xl">ข้อมูลส่วนตัว</h2>
+                        <p class="py-6 px-4 text-xl">ชื่อ-นามกุล: นาย ชัยวิชิต สร้อยสน
+                            ชื่อเล่น: ออม
+                            บุคลิกภาพ: เป็นคนเงียบๆ ง่ายๆ friendly ขี้อาย
+                            บุคลิกนิสัย: นิสัยดี ซื่อสัตย์ ขยัน อดทน จริงใจ ไม่โกหก</p>
+                    </div>
+                    <div class="py-6 rounded-xl shadow-md hover:scale-110 ease-in duration-300">
+                        <h2 class="text-3xl">ข้อมูลการศึกษา</h2>
+                        <p class="py-6 px-4 text-xl">โรงเรียนบ้านหนองระแหง อ.1-ป.1 พ.ศ. 2549-2552
+                            โรงเรียนวัดหนองใหญ่ ป.2-ม.3 พ.ศ. 2552-2560
+                            ศูนย์การเรียนพัลลัสอธีน่า กศน. ม.ปลาย พ.ศ. 2563-2564
+                            วิทยาลัยเทคโนโลยีพณิชยการ คณะบริหารธุรกิจ สาขาเทคโนโลยีธุรกิจดิจิทัล พ.ศ. 2564-2566
+                            มหาวิทยาลัยกรุงเทพธนบุรี คณะวิทยาศาสตร์และเทคโนโลยี สาขา เทคโนโลยีสารสนเทศ พ.ศ. 2566-256_</p>
+                    </div>
+                    <div class="py-6 rounded-xl shadow-md hover:scale-110 ease-in duration-300">
+                        <h2 class="text-3xl">สิ่งที่สนใจ</h2>
+                        <p class="py-6 px-8 text-xl">เลือกเรียนปริญาตรี คณะวิทยาศาสตร์และเทคโนโลยี สาขาเทคโนโลยีสารสนเทศ มหาวิทยาลัยกรุงเทพธนบุรี: เพราะเข้าง่าย บรรยากาศเป็นกันเอง ครู-อาจารย์และเพื่อนๆ อยู่กันแบบครอบครัว เพื่อน พี่ น้อง
+                            และสิ่งที่เลือกเรียนสาขาเทคโนโลยีสารสนเทศ: เพราะสาขานี้เป็นที่ต้องการของสายงานด้าน Programer และสิ่งที่ผมคาดหวังหลังจบการศึกษา คืออยากเป็น Front-end Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ส่วนท้าย -->
+    <footer class="bg-[#ffef42]">
+        <div class="container mx-auto" style="height: 600px;">
+            <div class="text-center">
+                <h1 class="text-5xl py-9">aomfolio100042</h1>
+                <div class="grid grid-cols-2 gap-8 mt-9">
+                    <div>
+                        <h2 class="text-2xl py-9 font-semibold">ข้อมูลการติดต่อ</h2>
+                        <div class="inline-flex flex-col">
+                            <span class="flex">
+                                <i class='bx bxl-gmail mr-2 text-xl hover:text-red-500 duration-200'></i><p>Email: chaiwichitss4568@gmail.com</p>
+                            </span>
+                            <span  class="flex">
+                                <i class='bx bx-at mr-2 mt-2 text-xl hover:text-green-500 duration-200'></i><p class="my-3">Line-ID: aomchit4568</p>
+                            </span>
+                            <span class="flex">
+                                <i class='bx bxl-github mr-2 text-xl hover:text-gray-500 duration-200'></i><p>Github: https://github.com/aomDEV83</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl py-9 font-semibold">Web Project</h2>
+                        <div>
+                            <p>เว็บเก็บผลงาน ปวส.</p>
+                            <a href="https://sites.google.com/view/cwc5583-portfolio/indexportfolio">
+                                <button class="bg-[#42c3ff] text-white font-semibold my-3 p-3 rounded-xl hover:scale-110 transition delay-300 duration-300 ease-in-out">CWC5583-portfolio</button>
+                            </a>
+                            <p>เว็บ Project จบ ปวส.</p>
+                            <a href="">
+                                <button class="bg-[#52ff42] text-white font-semibold my-3 p-3 rounded-xl hover:scale-110 transition delay-300 duration-300 ease-in-out">aomganic-farm</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+</body>
+</html>
