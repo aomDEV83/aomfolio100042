@@ -1,10 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Bai Jamjuree', sans-serif;
+    scroll-behavior: smooth;
+    color: #222;
 }
 
-/* .slick-carousel {
-    position: relative;
-    z-index: 1;
-} */
+body::-webkit-scrollbar {
+    width: 16px;
+    background-color: #fafafa;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #ffef42;
+    border-radius: 12px;
+}
+
+::selection {
+    background-color: #ffef42;
+}
+
+nav {
+    height: 130px;
+    padding: 0 4rem;
+    box-shadow: 0 2px 3px #fafafa;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
