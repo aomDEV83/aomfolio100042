@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เรื่องราว</title>
+    <link rel="icon" type="x-icon" href="/public/Images/logo-aomfolio100042.png">
+    <link rel="stylesheet" href="/public/css/stories.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+<body>
+
+    <!-- ส่วนหัว -->
+    <header>
+        <div class="container-xl mx-auto">
+            <nav class="flex justify-between items-center bg-[#ffef42]">
+                <a href="/public/index.html"><img class="logo-aom w-28 xl:w-48 lg:w-44 md:w-40 sm:w-36 h-32" src="/public/Images/logo-png-aomfolio100042.png" alt="โลโก้ออมโฟลิโอ"></a>
+                <div id="sidebar" class="">  
+                    <ul class="font-semibold text-lg flex items-center">
+                        <a href="/public/index.html">
+                            <li class="px-4 py-2 hover:text-[#52ff42] duration-200">HOME</li>
+                        </a>
+                        <a href="/public/html/event.html" target="_blank">
+                            <li class="px-6 hover:text-[#52ff42] duration-200">กิจกรรม</li>
+                        </a>
+                        <a href="/public/html/portfolio.html" target="_blank">
+                            <li class="px-6 hover:text-[#52ff42] duration-200">ผลงาน</li>
+                        </a>
+                        <a href="/public/html/stories.html" target="_blank">
+                            <li class="px-6 hover:text-[#52ff42] duration-200" id="active">สตอรี่</li>
+                        </a>
+                        <a href="/public/index.html#about">
+                            <li class="px-6 hover:text-[#52ff42] duration-200">เกี่ยวกับ</li>
+                        </a>
+                        <li class="px-6 hover:text-[#52ff42] duration-200 cursor-pointer" onclick="modal_contact.showModal()">ติดต่อ</li>
+                    </ul>
+                </div>
+
+                <!-- ปุ่มปิด sidebar -->
+                <div id="sidebar-close" class="cursor-pointer hidden text-4xl">
+                    <i class='bx bx-x'></i>
+                </div>
+
+                <!-- ปุ่มโชว์ sidebar -->
+                <div id="sidebar-hamburger" class="hidden cursor-pointer">
+                    <i class='text-3xl md:text-4xl sm:text-3xl bx bx-menu'></i>
+                </div>
+
+                <!-- btn darkMode -->
+                <div id="dark-light" class="hidden xl:block lg:block fixed xl:static lg:static left-2 bottom-2">
+                    <button id="sun-mode" class="text-2xl xl:text-4xl lg:text-4xl md:text-4xl sm:text-3xl"><i class='bx bx-sun' ></i></button>
+                    <button id="moon-mode" class="text-2xl xl:text-4xl lg:text-4xl md:text-4xl sm:text-3xl hidden"><i class='bx bx-moon' ></i></button>
+                </div>  
+            </nav>
+        </div>
+    </header>
+
+    <!-- ป็อปอัปการติดต่อ -->
+    <dialog id="modal_contact" class="modal">
+        <form method="dialog" class="modal-box">
+            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 outline-none hover:bg-[#ffef42] hover:text-[#222]">✕</button>
+            <h3 class="font-bold text-3xl">ติดต่อ</h3><hr>
+            <div class="flex flex-col my-5">
+                <div class="flex">
+                    <i class='bx bxl-gmail bx-tada mr-2 text-xl hover:text-red-500 duration-200'></i><p>Email: chaiwichitss4568@gmail.com</p>
+                </div>
+                <div  class="flex">
+                    <i class='bx bx-at bx-tada mr-2 mt-2 text-xl hover:text-green-500 duration-200'></i><p class="my-3">Line-ID: aomchit4568</p>
+                </div>
+            </div>
+        </form>
+    </dialog>
+
+    <!-- panagination story -->
+    <section>
+        <div class="container mx-auto">
+            <button id="btn-panagi" class="bg-[#ffef42] text-[#222] rounded-xl px-2 ms-2 md:ms-4 sm:ms-4 z-20 mt-44 fixed block xl:hidden lg:hidden"><i class='text-xl bx bx-menu-alt-left' ></i></button>
+            <div id="panagination-story" class="hover:bg-[#ddd] z-10 duration-500 fixed left-4 xl:left-12 lg:left-10 flex flex-col justify-center h-full w-28 xl:w-40 text-center overflow-y-scroll xl:overflow-y-hidden lg:overflow-y-hidden">
+                <div id="scroll-story" class="my-48 overflow-y-scroll">
+                    <div class="my-4 px-4">
+                        <a href="#btu-story-1">
+                            <img class="img-paginatoin mx-auto hover:scale-125 duration-300" src="/public/Images/BTU Day1/btu-d1-5.jpg" alt="รูปปกสตอรี่ปฐมนิเทศ" width="70%">
+                        <p class="truncate text-sm my-2 font-semibold">เปิดเทรมวันแรก ปฐมนิเทศ</p>
+                        </a>
+                    </div>
+                    <div class="my-4 px-4">
+                        <a href="#btu-story-2">
+                            <img class="img-paginatoin mx-auto hover:scale-125 duration-300" src="/public/Images/BTU Day2/btu-d2-2.jpg" alt="รูปปกไปเรียนวันแรก" width="70%">
+                        <p class="truncate text-sm my-2 font-semibold">ไปเรียนวันแรก</p>
+                        </a>
+                    </div>
+                    <div class="my-4 px-4">
+                        <a href="#btu-story-3">
+                            <img class="img-paginatoin mx-auto hover:scale-125 duration-300" src="/public/Images/BTU RMJ/btu-rmj-6.jpg" alt="รูปปกเที่ยวฟาร์มคาเฟ่" width="70%">
+                        <p class="truncate text-sm my-2 font-semibold">ไปมหาลัย..เคลียร์เรื่องกยศ.</p>
+                        </a>
+                    </div>
+                    <div class="my-4 px-4">
+                        <a href="#btu-story-4">
+                            <img class="img-paginatoin mx-auto hover:scale-125 duration-300" src="/public/Images/BTU waikru/wk-05.jpg" alt="รูปปกพิธีไหว้ครู" width="70%">
+                        <p class="truncate text-sm my-2 font-semibold">พิธีไหว้ครูและไหว้ครูคณะ</p>
+                        </a>
+                    </div>
+                    <div class="my-4 px-4">
+                        <a href="#btu-story-5">
+                            <img class="img-paginatoin mx-auto hover:scale-125 duration-300" src="/public/Images/Garden jtj/jtj-12.jpg" alt="รูปปกเที่ยวสวนสมเด็จพระนางเจ้าสิริกิติ์ฯ" width="70%">
+                        <p class="truncate text-sm my-2 font-semibold">เดินทางไปเรียนเสียเที่ยว</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end panagination story -->
+
+    <!-- head story -->
+    <div class="container mx-auto">
+        <h1 class="pt-52 text-center text-5xl xl:text-7xl lg:text-6xl md:text-5xl sm:text-5xl">เรื่องราว</h1>
+        <h2 class="mt-40 xl:mt-52 lg:mt-52 md:mt-48 sm:mt-48 text-center text-3xl xl:text-5xl lg:text-4xl md:text-3xl sm:text-3xl">ปี1 เทรม1</h2>
+        <marquee class="my-10" behavior="slide" direction="" scrolldelay="65" scrollamount="10">
+            <div id="img-blend" class="flex overflow-x-scroll">
+                <img class="w-full xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-full" src="/public/Images/btu-banner.jpg" alt="ป้ายมหาลัยภาพแรก">
+                <img class="w-full xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-full" src="/public/Images/btu-hero.jpg" alt="ป้ายมหาลัยภาพสอง">
+                <img class="w-full xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-full" src="/public/Images/BTU Day1/btu-d1-1.jpg" alt="BTU Hall">
+                <img class="w-full xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-full" src="/public/Images/BTU Day2/btu-d2-1.jpg" alt="หน้ามหาลัย">
+                <img class="w-full xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-full" src="/public/Images/BTU RMJ/btu-rmj-3.jpg" alt="รูปโลกมหาลัย">
+                <img class="w-full xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-full" src="/public/Images/BTU waikru/wk-08.jpg" alt="รูปหมู่คณะ">
+            </div>
+        </marquee>
+    </div>
+    
+    <!-- สตอรี่ สวนสมเด็จพระนางเจ้าสิริกิติ์ฯ -->
+    <section id="btu-story-5">
+        <div class="container mx-auto">
+            <div class="mt-32 pt-44 flex justify-between items-center">
+                <h3 class="text-xl xl:text-4xl lg:text-3xl font-bold text-gray-600 border-s-8 border-s-[#52ff42] ps-2 xl:ps-6 lg:ps-6 md:ps-4 sm:ps-4">เดินทางไปเรียนเสียเที่ยว</h3>
+                <p class="text-xl xl:text-5xl lg:text-4xl font-bold text-gray-200 pe-2 xl:ps-6 lg:pe-6 md:pe-4 sm:pe-4">16  ก.ค. 66</p>
+            </div>
+
+            <p class="mt-36 px-2 xl:px-0 mb-10 italic text-sm xl:text-lg lg:text-md text-gray-400">"เดินทางมาเรียนเก้อ ลงมาจาก MRT สถานีหลักสองแล้ว กำลังรอรถสองแถวต่อไปมหาลัย อาจาร์ยเพิ่งแจ้งมาในไลน์.. สรุปแล้ววันนี้ไม่ได้เรียนวิชานี้ !!! "</p>
+            <div class="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3">
+                <div class="mx-auto my-10 w-56 xl:w-64 lg:w-64 md:w-64">
+                    <video controls muted>
+                        <source src="/public/Videos/BTU vdo-jtj/themall-bc-vdo-1.mp4" type="video/mp4">
+                    </video>
+                    <p class="mt-3 text-xs xl:text-base lg:text-base md:text-md sm:text-sm tracking-wide leading-relaxed">ไหนๆไม่ได้เข้าไปมหาลัยแล้ว มานั่งเรียนออนไลน์วิชาโครงสร้างข้อมูล ข้างเดอะมอลล์บางแคไปก่อนแล้ว เสร็จแล้วไปเดินเล่นดูบนห้างสักหน่อย...</p>
+                </div>
+                <div class="mx-auto my-10 w-4/5 xl:w-10/12 lg:w-full md:w-3/6 sm:w-1/2">
+                    <video controls muted>
+                        <source src="/public/Videos/BTU vdo-jtj/themall-bc-vdo-2.mp4" type="video/mp4">
+                    </video>
+                    <p class="mt-3 text-xs xl:text-base lg:text-base md:text-md sm:text-sm tracking-wide leading-relaxed">ข้างบนสุดท้าย_ชั้น4มีสวนน้ำอยู่ เดินเข้าไปแอบถ่ายวีดีโอ... ที่จริงต้องซื้อตั๋วก่อนถึงจะเข้าได้ โดนพนักงานทักเลย.. "ผมมาดูเฉยๆ" <s class="decoration-2 decoration-red-400">ไม่ได้มาเล่น</s> ฮ่าๆๆ.</p>
+                </div>
+                <div class="mx-auto my-10 w-56 xl:w-64 lg:w-64 md:w-64">
+                    <video controls muted class="">
+                        <source src="/public/Videos/BTU vdo-jtj/themall-bc-vdo-3.mp4" type="video/mp4">
+                    </video>
+                    <p class="mt-3 text-xs xl:text-base lg:text-base md:text-md sm:text-sm tracking-wide leading-relaxed">แวะเที่ยวเสร็จแล้ว ไป๊กลับๆๆ ขึ้นMRTกลับ</p>
+                </div>
+            </div>
+
+            <p class="mt-36 px-2 xl:px-0 mb-10 italic text-sm xl:text-lg lg:text-md mb-10 italic text-lg text-gray-400">"ไหนๆมาแล้วตั้งที ขากลับ แวะเที่ยวสวนสตุจักรเลยแล้วกัน 'BTS สถานีหมอชิต' "</p>
+            <img class="mx-auto my-14 w-4/5 xl:w-1/3 lg:w-1/3 md:w-3/6 sm:w-3/5" src="/public/Images/Garden jtj/jtj-01.jpg" alt="ภาพพิธีไหว้ครูใน Hall ภาพแรก">
+            
+            <h2 class="font-semibold text-center px-4 xl:px-0 lg:px-0 md:px-2 w-24 xl:w-80 lg:w-80 md:w-40 mx-auto mt-40 mb-20 font-semibold text-center text-sm xl:text-lg lg:text-lg italic border-s-4 border-s-[#52ff42] hover:text-[#52ff42]">เที่ยวสวนสมเด็จพระนางเจ้าสิริกิติ์ฯ</h2>
+
+            <div class="grid grid-cols-1 xl:grid-cols-2">
+                <div class="mx-auto my-10 w-4/5 xl:w-3/5 lg:w-2/5 md:w-3/6 sm:w-1/2">
+                    <video controls muted>
+                        <source src="/public/Videos/BTU vdo-jtj/vdo-jtj-1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="mx-auto my-10 w-56 xl:w-64 lg:w-64 md:w-64">
+                    <video controls muted>
+                        <source src="/public/Videos/BTU vdo-jtj/vdo-jtj-2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="mx-auto my-10 w-4/5 xl:w-3/5 lg:w-2/5 md:w-3/6 sm:w-1/2">
+                    <video controls muted>
+                        <source src="/public/Videos/BTU vdo-jtj/vdo-jtj-3.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="mx-auto my-10 w-56 xl:w-64 lg:w-64 md:w-64">
+                    <video controls muted>
+                        <source src="/public/Videos/BTU vdo-jtj/vdo-jtj-4.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <div class="story-carousel my-32"  data-flickity='{ "wrapAround": true, "autoPlay": true }'>
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/Garden jtj/jtj-02.jpg" alt="ภาพสวนสมเด็จพระนางเจ้าสิริกิติ์ฯภาพที่1">
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/Garden jtj/jtj-03.jpg" alt="ภาพสวนสมเด็จพระนางเจ้าสิริกิติ์ฯภาพที่2">
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/Garden jtj/jtj-04.jpg" alt="ภาพสวนสมเด็จพระนางเจ้าสิริกิติ์ฯภาพที่3">
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/Garden jtj/jtj-05.jpg" alt="ภาพสวนสมเด็จพระนางเจ้าสิริกิติ์ฯภาพที่4">
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/Garden jtj/jtj-06.jpg" alt="ภาพสวนสมเด็จพระนางเจ้าสิริกิติ์ฯภาพที่5">
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/Garden jtj/jtj-07.jpg" alt="ภาพสวนสมเด็จพระนางเจ้าสิริกิติ์ฯภาพที่6">
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/Garden jtj/jtj-08.jpg" alt="ภาพสวนสมเด็จพระนางเจ้าสิริกิติ์ฯภาพที่7">
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/Garden jtj/jtj-09.jpg" alt="ภาพสวนสมเด็จพระนางเจ้าสิริกิติ์ฯภาพที่8">
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/Garden jtj/jtj-10.jpg" alt="ภาพสวนสมเด็จพระนางเจ้าสิริกิติ์ฯภาพที่9">
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/Garden jtj/jtj-11.jpg" alt="ภาพสวนสมเด็จพระนางเจ้าสิริกิติ์ฯภาพที่10">
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/Garden jtj/jtj-12.jpg" alt="ภาพสวนสมเด็จพระนางเจ้าสิริกิติ์ฯภาพที่11">
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/Garden jtj/jtj-13.jpg" alt="ภาพสวนสมเด็จพระนางเจ้าสิริกิติ์ฯภาพที่12">
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/Garden jtj/jtj-14.jpg" alt="ภาพสวนสมเด็จพระนางเจ้าสิริกิติ์ฯภาพที่13">
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!--สิ้นสุด สตอรี่ สวนสมเด็จพระนางเจ้าสิริกิติ์ฯ -->
+
+    <!-- สตอรี่ ไหว้ครู -->
+    <section id="btu-story-4" style="background-color: #fafafa;" class="even-story">
+        <div class="container mx-auto">
+            <div class="pt-44 flex justify-between items-center">
+                <h3 class="text-xl xl:text-4xl lg:text-3xl font-bold text-gray-600 border-s-8 border-s-[#42c3ff] ps-2 xl:ps-6 lg:ps-6 md:ps-4 sm:ps-4">พิธีไหว้ครูและไหว้ครูคณะ</h3>
+                <p class="text-xl xl:text-5xl lg:text-4xl font-bold text-gray-200 pe-2 xl:ps-6 lg:pe-6 md:pe-4 sm:pe-4">9  ก.ค. 66</p>
+            </div>
+
+            <div class="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 mt-36">
+                <img class="mx-auto my-10 w-4/5 xl:w-10/12 lg:w-10/12 md:w-3/6 sm:w-1/2" src="/public/Images/BTU waikru/wk-09.jpg" alt="ภาพพิธีไหว้ครูใน Hall ภาพแรก">
+                <div class="mx-auto my-10 w-4/5 w-4/5 xl:w-10/12 lg:w-10/12 md:w-3/6 sm:w-1/2">
+                    <video controls muted>
+                        <source src="/public/Videos/BTU vdo-wk/wk-vdo-1.mp4" type="video/mp4">
+                    </video>
+                    <p class="mt-3 text-xs xl:text-base lg:text-base md:text-md sm:text-sm italic text-center">พิธีไหว้ครู นักศึกษาตัวแทนแต่ละคณะขึ้นไหว้ครู</p>
+                </div>
+                <img class="mx-auto my-10 w-4/5 xl:w-10/12 lg:w-10/12 md:w-3/6 sm:w-1/2" src="/public/Images/BTU waikru/wk-10.jpg" alt="ภาพพิธีไหว้ครูใน Hall ภาพสอง">
+            </div>
+
+            <h2 class="mt-48 mb-10 font-semibold text-center text-lg xl:text-3xl lg:text-2xl md:text-xl hover:text-[#52ff42]">ไหว้ครูคณะวิทยาศาสตร์และเทคโนโลยี</h2>
+            <div class="story-carousel my-32"  data-flickity='{ "wrapAround": true, "autoPlay": true }'>
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/BTU waikru/wk-01.jpg" alt="ภาพไหว้ครูภาพที่1">
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/BTU waikru/wk-02.jpg" alt="ภาพไหว้ครูภาพที่2">
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/BTU waikru/wk-03.jpg" alt="ภาพไหว้ครูภาพที่3">
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/BTU waikru/wk-04.jpg" alt="ภาพไหว้ครูภาพที่4">
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/BTU waikru/wk-05.jpg" alt="ภาพไหว้ครูภาพที่5">
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/BTU waikru/wk-06.jpg" alt="ภาพไหว้ครูภาพที่6">
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/BTU waikru/wk-07.jpg" alt="ภาพไหว้ครูภาพที่7">
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/BTU waikru/wk-08.jpg" alt="ภาพไหว้ครูภาพที่8">
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!--สิ้นสุด สตอรี่ ไหว้ครู -->
+
+    <!-- สตอรี่ ฟาร์มออร์แกนิก -->
+    <section id="btu-story-3">
+        <div class="container mx-auto">
+            <div class="pt-44 flex justify-between items-center">
+                <h3 class="text-xl xl:text-4xl lg:text-3xl font-bold font-bold text-gray-600 border-s-8 border-s-[#ffef42] ps-2 xl:ps-6 lg:ps-6 md:ps-4 sm:ps-4">ไปมหาลัย..เคลียร์เรื่องกยศ.
+                    <span class="text-md xl:text-3xl lg:text-2xl text-green-400">ขากลับแวะเที่ยวคาเฟ่</span>
+                </h3>
+                <p class="text-xl xl:text-4xl lg:text-3xl font-bold text-gray-200 pe-2 xl:ps-6 lg:pe-6 md:pe-4 sm:pe-4">2  ก.ค. 66</p>
+            </div>
+
+            <p class="mt-36 mb-10 px-2 xl:px-0 italic text-sm xl:text-lg lg:text-md text-gray-400">"แวะมาถ่ายรูปหน้ามหาลัย"</p>
+
+            <div class="mx-auto grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-3 w-4/5 xl:w-10/12 lg:w-10/12 md:w-4/6 sm:w-1/2">
+                <img class="" src="/public/Images/btu-banner.jpg" alt="รูปถ่ายหน้ามหาวิทยาลัย1">
+                <img class="" src="/public/Images/btu-hero.jpg" alt="รูปถ่ายหน้ามหาวิทยาลัย2">
+                <img class="" src="/public/Images/BTU RMJ/btu-rmj-2.jpg" alt="รูปถ่ายหน้ามหาวิทยาลัย3">
+                <img class="" src="/public/Images/BTU RMJ/btu-rmj-3.jpg" alt="ภาพรูปโลกหมุน มหาวิทยาลัยกรุงเทพธนบุรี">
+            </div>
+
+            <h2 class="px-4 xl:px-0 lg:px-0 md:px-4 w-24 xl:w-96 lg:w-96 md:w-40 mx-auto mt-40 mb-20 font-semibold text-center text-sm xl:text-lg lg:text-lg italic border-s-4 border-s-[#ffef42] hover:text-[#52ff42]">แวะเที่ยวคาเฟ่ฟาร์มออร์แกนิก ไร่เหมือนจันทร์</h2>
+            <div class="grid grid-cols-1 xl:grid-cols-3">
+                <div class="mx-auto mt-10 w-4/5 xl:w-5/6 lg:w-2/5 md:w-3/6 sm:w-1/2">
+                    <video controls muted>
+                        <source src="/public/Videos/BTU vdo-rmj/rmj-vdo-1.mp4" type="video/mp4">
+                    </video>
+                    <p class="mt-3 text-xs xl:text-base lg:text-base md:text-md sm:text-sm tracking-wide leading-relaxed">เดินทัวฟาร์มซะหน่อย มีแปลงผักออร์แกนิก มีเป็ดเลี้ยง แค่เดินไกล้ๆไปก็คิดว่าจะอาหารหล่ะ</p>
+                </div>
+                <div class="mx-auto mt-10 w-56 xl:w-64 lg:w-64 md:w-64">
+                    <video controls muted>
+                        <source src="/public/Videos/BTU vdo-rmj/rmj-vdo-ped.mp4" type="video/mp4">
+                    </video>
+                    <p class="mt-3 text-xs xl:text-base lg:text-base md:text-md sm:text-sm tracking-wide leading-relaxed">"ก๊าบๆๆ" ดูจะหิวกันใหญ่นะ มาๆไปซื้ออาหารมาให้สักหน่อย เป็นอาหารเม็ดแฮะ มันกินด้วย ...แป๊บเดียวหมด <span class="italic text-gray-400">มีตัวนึงซนแอบหนีมาอยู่ข้างนอกด้วยแฮะ</span></p>
+                </div>
+                <div class="mx-auto mt-10 w-56 xl:w-64 lg:w-64 md:w-64">
+                    <video controls muted>
+                        <source src="/public/Videos/BTU vdo-rmj/rmj-vdo-3.mp4" type="video/mp4">
+                    </video>
+                    <p class="mt-3 text-xs xl:text-base lg:text-base md:text-md sm:text-sm tracking-wide leading-relaxed">หิวๆๆ มาฟาร์มออร์แกนิกทั้งที ต้องได้ลองของบริสุทธิ์สักหน่อย จัดมาก๋วยเตี๋ยวต้มยำ วัตถุดิบสดๆจากฟาร์มเขานี้หล่ะ สุดจริงรสชาติ ..แบบออร์แกนิกเลย <span class="italic text-gray-400">มีเนียนแอบหยิบเงาะเค้ามากิน ของใครวางไว้ไม่รู้</span></p>
+                </div>
+            </div>
+
+            <div class="story-carousel mx-auto my-32"  data-flickity='{ "wrapAround": true, "autoPlay": true }'>
+                <div class="w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12 mr-5">
+                    <img class="" src="/public/Images/BTU RMJ/btu-rmj-4.jpg" alt="หน้าทางเข้าไร่เหมือนจันทร์">
+                    <!-- <p class="mt-2 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem rerum nemo sint illum quod commodi optio excepturi. Totam, dicta laudantium!</p> -->
+                </div>
+                <div class="w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12 mr-5">
+                    <img class="" src="/public/Images/BTU RMJ/btu-rmj-5.jpg" alt="ป้ายทางเข้าไร่เหมือนจันทร์">
+                    <!-- <p class="mt-2 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem rerum nemo sint illum quod commodi optio excepturi. Totam, dicta laudantium!</p> -->
+                </div>
+                <div class="w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12 mr-5">
+                    <img class="" src="/public/Images/BTU RMJ/btu-rmj-6.jpg" alt="ภาพถ่าย นั่งกระเช้า">
+                    <p class="mt-2 mb-5 text-center text-gray-400 text-xs xl:text-base lg:text-base md:text-md sm:text-sm">ขอถ่ายสักหน่อย</p>
+                </div>
+                <div class="w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12 mr-5">
+                    <img class="" src="/public/Images/BTU RMJ/btu-rmj-7.jpg" alt="ทางเข้าชมสวนเมล่อน">
+                    <p class="mt-2 mb-5 tracking-wide leading-relaxed text-center text-xs xl:text-base lg:text-base md:text-md sm:text-sm">ว่าจะมาชมเมล่อน น่าเสียดายยังไม่ถึงฤดูกาล เขาเพิ่งจะเริ่มปลูก..</p>
+                </div>
+                <div class="w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12 mr-5">
+                    <img class="" src="/public/Images/BTU RMJ/btu-rmj-8.jpg" alt="รูปปั้นเมล่อน">
+                    <!-- <p class="mt-2 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem rerum nemo sint illum quod commodi optio excepturi. Totam, dicta laudantium!</p> -->
+                </div>
+                <div class="w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12 mr-5">
+                    <img class="h-40 xl:h-44 lg:h-40 md:h-52 sm:h-60 w-full" src="/public/Images/BTU RMJ/btu-rmj-9.jpg" alt="ภาพเป็ด">
+                    <p class="mt-2 mb-5 tracking-wide leading-relaxed text-center text-xs xl:text-base lg:text-base md:text-md sm:text-sm">เป็ดตัวนี้คือมาอยู่นอกเล้าตัวเดียว ขอถ่ายรูปหน่อย</p>
+                </div>
+                <div class="w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12 mr-5">
+                    <img class="" src="/public/Images/BTU RMJ/btu-rmj-10.jpg" alt="ภาพฝูงเป็ด">
+                    <!-- <p class="mt-2 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem rerum nemo sint illum quod commodi optio excepturi. Totam, dicta laudantium!</p> -->
+                </div>
+                <div class="w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12 mr-5">
+                    <img class="h-40 xl:h-44 lg:h-40 md:h-52 sm:h-60 w-full" src="/public/Images/BTU RMJ/btu-rmj-11.jpg" alt="ก๋วยเตี๋ยวเส้นใหญ่ต้มยำออร์แกนิก">
+                    <p class="mt-2 mb-5 tracking-wide leading-relaxed text-center text-xs xl:text-base lg:text-base md:text-md sm:text-sm">ก๋วยเตี๋ยวเส้นใหญ่ต้มยำออร์แกนิก</p>
+                </div>
+                <div class="w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12 mr-5">
+                    <img class="" src="/public/Images/BTU RMJ/btu-rmj-12.jpg" alt="ภาพถ่ายอาหาร ก๋วยเตี๋ยวต้มยำ, ข้าวผัดต้มยำ">
+                    <p class="mt-2 mb-5 tracking-wide leading-relaxed text-center text-xs xl:text-base lg:text-base md:text-md sm:text-sm">กินๆๆ เพื่อนจัดมาสองอย่างเลย สั่งข้าวผัดต้มยำมาเพิ่ม ...</p>
+                </div>
+                <div class="w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12 mr-5">
+                    <img class="" src="/public/Images/BTU RMJ/btu-rmj-13.jpg" alt="ภาพ อาหารหมดจาน">
+                    <p class="mt-2 mb-5 tracking-wide leading-relaxed text-center text-xs xl:text-base lg:text-base md:text-md sm:text-sm">หมดเกลี้ยง รวมถึงข้าวผัดของเพื่อนด้วย ผมจัดการเอง.. <span class="italic text-gray-400 text-xs xl:text-base lg:text-base md:text-md sm:text-sm">กินไม่หมดให้โผมคร้าบบบ5555</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!--สิ้นสุด สตอรี่ ฟาร์มออร์แกนิก -->
+
+    <!-- สตอรี่ ไปเรียนวันแรก -->
+    <section id="btu-story-2" style="background-color: #fafafa;" class="even-story">
+        <div class="container mx-auto">
+            <div class="pt-44 flex justify-between items-center">
+                <h3 class="text-md xl:text-4xl lg:text-3xl md:text-xl sm:text-xl font-bold text-gray-600 border-s-8 border-s-[#52ff42] ps-2 xl:ps-6 lg:ps-6 md:ps-4 sm:ps-4">ไปเรียนวันแรก<span class="rotate-45 text-lg xl:text-4xl lg:text-4xl xl:text-2xl sm:text-2xl text-red-400 float-right">ขึ้นรถผิดคัน!!</span></h3>
+                <p class="text-md xl:text-4xl lg:text-3xl md:text-xl sm:text-xl font-bold text-gray-200 pe-2 xl:ps-6 lg:pe-6 md:pe-4 sm:pe-4">25 มิ.ย. 66</p>
+            </div>
+
+            <div class="py-20 grid grid-cols-1 lg:grid-cols-3 lg:grid-cols-1">
+                <div class="mx-auto mt-10 w-56 xl:w-64 lg:w-64 md:w-64">
+                    <video controls muted>
+                        <source src="/public/Videos/BTU vdo-Day2/btu-vdo-d2-1.mp4" type="video/mp4">
+                    </video>
+                    <p class="mt-3 text-xs xl:text-base lg:text-base md:text-md sm:text-sm tracking-wide leading-relaxed">เดินทางด้วย MRT จากสถานีสวนจตุจักร ยาวไปถึงสถานีหลักสอง..</p>
+                </div>
+                <div class="mx-auto mt-10 w-56 xl:w-64 lg:w-64 md:w-64">
+                    <video controls muted>
+                        <source src="/public/Videos/BTU vdo-Day2/btu-vdo-d2-2.mp4" type="video/mp4">
+                    </video>
+                    <p class="mt-3 text-xs xl:text-base lg:text-base md:text-md sm:text-sm tracking-wide leading-relaxed">ต่อสองแถวไปอีกทอด ..แต่ดันขึ้นผิดคัน...</p>
+                </div>
+                <div class="mx-auto mt-10 w-56 xl:w-64 lg:w-64 md:w-64">
+                    <video controls muted>
+                        <source src="/public/Videos/BTU vdo-Day2/btu-vdo-d2-3.mp4" type="video/mp4">
+                    </video>
+                    <p class="mt-3 text-xs xl:text-base lg:text-base md:text-md sm:text-sm tracking-wide leading-relaxed">ดีที่ดู map ลงมาก่อน มาอยู่ตรงบิ๊กซีเพชรเกษม รอขึ้นคันใหม่ <span class="italic text-gray-400 text-xs xl:text-base lg:text-base md:text-md sm:text-sm">ถามคนแถวนั้นบอกต้องขึ้นคันที่ไปพุทธมลฑล กับสนามหลวง2</span></p>
+                </div>
+
+                <div class="mx-auto mt-10 w-56 xl:w-64 lg:w-64 md:w-64">
+                    <video controls muted>
+                        <source src="/public/Videos/BTU vdo-Day2/btu-vdo-d2-4.mp4" type="video/mp4">
+                    </video>
+                    <p class="mt-3 text-xs xl:text-base lg:text-base md:text-md sm:text-sm w-64 tracking-wide leading-relaxed">ถึงสักทีมาถูกแล้ว...</p>
+                </div>
+                <div class="mx-auto mt-10 w-4/5">
+                    <img class="md:mx-auto sm:mx-auto xl:w-full lg:w-full md:w-3/5 sm:w-4/5" src="/public/Images/BTU Day2/btu-d2-1.jpg" alt="ภาพถ่ายหน้าป้ายมหาวิทยาลัยกรุงเทพธนบุรี">
+                    <div class="border-s-4 border-s-[#52ff42] ps-2 xl:ps-6 lg:ps-6 md:ps-4 sm:ps-4">
+                        <p class="my-3 tracking-wide leading-relaxed italic text-gray-400 text-xs xl:text-base lg:text-base md:text-md sm:text-sm">หน้ามหาวิทยาลัยกรุงเทพธนบุรี</p>
+                    </div>
+                </div>
+                <div class="mx-auto mt-10 w-4/5">
+                    <img class="md:mx-auto sm:mx-auto xl:w-full lg:w-full md:w-3/5 sm:w-4/5" src="/public/Images/BTU Day2/btu-d2-2.jpg" alt="ภาพถ่ายหน้ากระจก ศูนย์นั่งพักผ่อน">
+                    <div class="border-s-4 border-s-[#52ff42] ps-2 xl:ps-6 lg:ps-6 md:ps-4 sm:ps-4">
+                        <p class="my-3 tracking-wide leading-relaxed italic text-gray-400 text-xs xl:text-base lg:text-base md:text-md sm:text-sm">นั่งรอเรียนวิชาต่อไป ที่สวนนั่งพักผ่อน</p>
+                    </div>
+                </div>
+
+                <div class="mx-auto my-10 w-56 xl:w-64 lg:w-64 md:w-64">
+                    <video controls muted>
+                        <source src="/public/Videos/BTU vdo-Day2/btu-vdo-d2-5.mp4" type="video/mp4">
+                    </video>
+                    <p class="mt-3 text-xs xl:text-base lg:text-base md:text-md sm:text-sm tracking-wide leading-relaxed">ขากลับก็ขึ้นสองไปลงที่เดอะมอลล์บางแค ขึ้น MRT สถานีหลักสอง</p>
+                </div>
+                <div class="mx-auto my-10 w-4/5">
+                    <img class="md:mx-auto sm:mx-auto xl:w-full lg:w-full md:w-3/5 sm:w-4/5" src="/public/Images/BTU Day2/btu-d2-3.jpg" alt="ภาพถ่าย ป้ายสายสถานีรถไฟฟ้า MRT">
+                    <div class="border-s-4 border-s-[#52ff42] ps-2 xl:ps-6 lg:ps-6 md:ps-4 sm:ps-4">
+                        <p class="mt-3 xl:w-64 tracking-wide leading-relaxed italic text-gray-400 text-xs xl:text-base lg:text-base md:text-md sm:text-sm">ขึ้น MRT จากสถานีหลักสองไปลงสถานีสวนจตุจักร</p>
+                    </div>
+                </div>
+                <div class="mx-auto my-10 w-56 xl:w-64 lg:w-64 md:w-64">
+                    <video controls muted>
+                        <source src="/public/Videos/BTU vdo-Day2/btu-vdo-d2-6.mp4" type="video/mp4">
+                    </video>
+                    <p class="mt-3 text-xs xl:text-base lg:text-base md:text-md sm:text-sm">ระหว่างสถานี บางอ้อขบางโพ รถไฟฟ้าจผ่านข้ามแม่นำ้เจ้าพระยา เป็นวิวทั้งสองข้างทางที่ดีจริงๆ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!--สิ้สุด สตอรี่ ไปเรียนวันแรก -->
+
+    <!-- สตอรี่ เปิดเทรมวันแรก -->
+    <section id="btu-story-1">
+        <div class="container mx-auto">
+            <div class="pt-44 flex justify-between items-center">
+                <h3 class="text-xl xl:text-4xl lg:text-3xl font-bold text-gray-600 border-s-8 border-s-[#42c3ff] ps-2 xl:ps-6 lg:ps-6 md:ps-4 sm:ps-4">เปิดเทรมวันแรก.. <span class="underline text-gray-600">ปฐมนิเทศ!</span></h3>
+                <p class="text-xl xl:text-4xl lg:text-3xl font-bold text-gray-200 pe-2 xl:ps-6 lg:pe-6 md:pe-4 sm:pe-4">11 มิ.ย. 66</p>
+            </div>
+            <div class="story-carousel my-32"  data-flickity='{ "wrapAround": true, "autoPlay": true }'>
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/BTU Day1/btu-d1-1.jpg" alt="ภาพถ่ายหน้า Bankkok Thonburi Hall">
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/BTU Day1/btu-d1-2.jpg" alt="ภาพประถมฐิเทศรูปแรก">
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/BTU Day1/btu-d1-3.jpg" alt="ภาพประถมฐิเทศรูปสอง">
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/BTU Day1/btu-d1-4.jpg" alt="ภาพถ่ายหมู่ เพื่อนกับอธิการบดีคณะบริหาร">
+                <img class="mr-5 w-11/12 xl:w-1/4 lg:w-1/4 md:w-6/12 sm:w-8/12" src="/public/Images/BTU Day1/btu-d1-5.jpg" alt="ภาพถ่ายตัวผมเอง">
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!--สิ้นสุด สตอรี่ เปิดเทรมวันแรก -->
+
+    <!-- scroll to top -->
+    <button id="scroll-top" class="fixed right-8 xl:right-12 lg:right-12 md:right-8 sm:right-8 bottom-20 xl:bottom-40 lg:bottom-36 md:bottom-28 sm:bottom-24 text-2xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl bg-[#ffef42] rounded-xl"><i class='bx bx-chevron-up text-[#222] hover:text-[#52ff42]'></i></button>
+
+    <!-- scroll to bottom -->
+    <button id="scroll-bottom" class="fixed right-8 xl:right-12 lg:right-12 md:right-8 sm:right-8 bottom-8 xl:bottom-12 lg:bottom-12 md:bottom-8 sm:bottom-8 text-2xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl bg-[#ffef42] rounded-xl hover:animate-bounce"><i class='bx bx-chevron-down text-[#222] hover:text-[#52ff42]'></i></button>
+
+    <!-- ส่วนท้าย -->
+    <footer class="bg-[#ffef42] text-[#222] px-6 xl:px-0 lg:px-8 pb-16 xl:pb-28 lg:pb-28 md:pb-20 sm:pb-16">
+        <div class="container mx-auto">
+            <div class="text-center">
+                <a href="/public/index.html"><img class="w-48 xl:w-64 lg:w-60 md:w-52 sm:w-56 mx-auto" src="/public/Images/logo-png-aomfolio100042.png" alt="โลโก้ออมโฟลิโอ"></a>
+                <div class="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-8 mt-5">
+                    <div>
+                        <h2 class="text-xl xl:text-2xl lg:text-2xl py-9 font-semibold">ข้อมูลการติดต่อ</h2>
+                        <div class="inline-flex flex-col text-start">
+                            <span class="flex">
+                                <i class='bx bxl-gmail mr-2 text-sm xl:text-xl lg:text-xl md:text-xl sm:text-xl hover:text-red-500 duration-200'></i><p class="text-sm xl:text-xl lg:text-xl md:text-lg sm:text-lg">Email: chaiwichitss4568@gmail.com</p>
+                            </span>
+                            <span  class="flex">
+                                <i class='bx bx-at mr-2 mt-2 text-sm xl:text-xl lg:text-xl md:text-xl sm:text-xl hover:text-green-500 duration-200'></i><p class="my-3 text-sm xl:text-xl lg:text-xl md:text-lg sm:text-lg">Line-ID: aomchit4568</p>
+                            </span>
+                            <span class="flex">
+                                <i class='bx bxl-github mr-2 text-sm xl:text-xl lg:text-xl md:text-xl sm:text-xl hover:text-gray-500 duration-200'></i>
+                                <p class="text-sm xl:text-xl lg:text-xl md:text-lg sm:text-lg">Github: 
+                                    <span class="hover:underline decoration-1"><a href="https://github.com/aomDEV83" target="_blank">https://github.com/aomDEV83</a></span>
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="text-xl xl:text-2xl lg:text-2xl py-9 font-semibold">Web Project</h2>
+                        <div>
+                            <p>เว็บเก็บผลงาน ปวส.</p>
+                            <a href="https://sites.google.com/view/cwc5583-portfolio/indexportfolio" target="_blank">
+                                <button class="bg-[#42c3ff] text-white font-semibold my-3 p-3 rounded-xl hover:scale-110 transition delay-300 duration-300 ease-in-out">CWC5583-portfolio</button>
+                            </a>
+                            <p>เว็บ Project จบ ปวส.</p>
+                            <a href="https://aomganic-farm.web.app/" target="_blank">
+                                <button class="bg-[#52ff42] text-white font-semibold my-3 p-3 rounded-xl hover:scale-110 transition delay-300 duration-300 ease-in-out">aomganic-farm</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="container mx-auto h-16 xl:h-28 lg:h-28 md:h-20 flex justify-center items-center text-center">
+        <p id="build-by" class="text-[#ccc] text-xs xl:text-base lg:text-sm w-48 xl:w-auto lg:w-auto md:w-auto sm:w-auto">Developed By นาย ชัยวิชิต สร้อยสน รหัสประจำตัวนักศึกษา 6615100042 กลุ่ม 7S/66</p>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="/public/js/stories.js"></script>
+</body>
+</html>

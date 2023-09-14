@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bai Jamjuree', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 16px;
+    background-color: #fafafa;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #ffef42;
+    border-radius: 12px;
+    height: 30%;
+}
+
+::selection {
+    background-color: #ffef42;
+}
+
+nav {
+    color: #222;
+    height: 130px;
+    padding: 0 4rem;
+    box-shadow: 0 1px 10px gold;
+    position: fixed;
+    width: 100%;
+    z-index: 100042;
+}
+
+body {
+    color: #222;
+}
+
+body.dark-mode {
+    background-color: #111;
+    color: #fafafa;
+}
+
+/* more screen responsive */
+@media screen and (min-width: 820px) and (max-width: 1023px) {
+    nav {
+        padding: 0 2rem;
+    }
+
+    nav ul li {
+        font-size: 14px;
+    }
+
+    #dark-light {
+        display: block;
+        color: #ccc;
+    }
+
+    #dark-light i {
+        font-size: 20px;
+        position: fixed;
+        left: 20px;
+        bottom: 20px;
+    }
+
+    #btn-panagi {
+        display: none;
+    }
+
+    #scroll-story {
+        height: 390px;
+    }
+
+    .focus-btn-panagi {
+        outline: 2px solid #52ff42;
+    }
+}
+
+/* tablet screen responsive */
+@media screen and (min-width: 769px) and (max-width: 819px) {
+    nav {
+        padding: 0 2rem;
+    }
+
+    #sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 20%;
+        height: 100%;
+        background-color: #ffef42;
+        padding: 20px;
+        box-shadow: 0 1px 10px gold;
+        display: none;
+    }
+
+    #sidebar ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    #sidebar ul li {
+        padding: 5px;
+    }
+
+    #sidebar-hamburger {
+        display: block;
+    }
+
+    #sidebar-close {
+        position: fixed;
+        top: 2%;
+        left: 20%;
+    }
+}
+
+/* tablet responsive */
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 0 2rem;
+    }
+
+    #sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 20%;
+        height: 100%;
+        background-color: #ffef42;
+        padding: 20px;
+        box-shadow: 0 1px 10px gold;
+        display: none;
+    }
+
+    #sidebar ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    #sidebar ul li {
+        padding: 5px;
+    }
+
+    #sidebar-hamburger {
+        display: block;
+    }
+
+    #sidebar-close {
+        position: fixed;
+        top: 2%;
+        left: 20%;
+        display: none;
+    }
+}
+
+/* mobile responsive */
+@media screen and (min-width: 281px) and (max-width: 644px) {
+    nav {
+        padding: 0 2rem;
+    }
+
+    #sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 40%;
+        height: 100%;
+        background-color: #ffef42;
+        padding: 20px;
+        box-shadow: 0 1px 10px gold;
+        display: none;
+    }
+
+    #sidebar ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    #sidebar ul li {
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    #sidebar-hamburger {
+        display: block;
+    }
+
+    #sidebar-close {
+        top: 2%;
+        left: 40%;
+        display: none;
+    }
+
+    #scroll-top, #scroll-bottom {
+        width: 30px;
+    }
+}
+
+@media screen and (max-width: 303px) {
+    #modal_contact {
+        font-size: 14px;
+    }
+
+    #sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 40%;
+        height: 100%;
+        background-color: #ffef42;
+        padding: 20px;
+        box-shadow: 0 1px 10px gold;
+        display: none;
+    }
+
+    #sidebar ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    #sidebar ul li {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    #sidebar-hamburger {
+        display: block;
+    }
+
+    #sidebar-close {
+        top: 2%;
+        left: 40%;
+        display: none;
+        font-size: 28px;
+    }
+
+    #scroll-top, #scroll-bottom {
+        width: 25px;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    #course-y_1-t_1 h2 {
+        font-size: 14px;
+    }
+
+    .display-xs {
+        font-size: 12px;
+    }
+}
