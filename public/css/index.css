@@ -45,7 +45,7 @@ body.dark-mode {
 .hero {
     padding: 3rem 0;
     background-color: #ffef42;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../Images/btu-hero.jpg") no-repeat center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/access/Images/btu-hero.jpg") no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     align-items: center;
