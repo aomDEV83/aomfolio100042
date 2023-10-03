@@ -36,7 +36,7 @@ $(document).ready(function() {
         $('#dark-light').hide(300);
     });
 
-    // light mode
+    // dark mode
     $('#sun-mode').click(function() {
         $(this).hide(600), $('#moon-mode').show(600);
 
@@ -55,7 +55,7 @@ $(document).ready(function() {
         $('#build-by').css({'color': '#666'});
     });
 
-    // dark mode
+    // light mode
     $('#moon-mode').click(function() {
         $(this).hide(600), $('#sun-mode').show(600);
 
