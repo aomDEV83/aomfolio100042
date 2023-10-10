@@ -110,6 +110,10 @@ body.dark-mode {
     .focus-btn-panagi {
         outline: 2px solid #52ff42;
     }
+
+    iframe {
+        height: 480px;
+    }
 }
 
 /* tablet screen responsive */
@@ -166,6 +170,10 @@ body.dark-mode {
     .focus-btn-panagi {
         outline: 2px solid #52ff42;
     }
+
+    iframe {
+        height: 480px;
+    }
 }
 
 /* tablet responsive */
@@ -217,6 +225,10 @@ body.dark-mode {
 
     .focus-btn-panagi {
         outline: 2px solid #52ff42;
+    }
+
+    iframe {
+        height: 480px;
     }
 }
 
@@ -279,6 +291,15 @@ body.dark-mode {
     .focus-btn-panagi {
         outline: 2px solid #52ff42;
     }
+
+    iframe {
+        height: 398px;
+    }
+
+    .emb-my-web {
+        width: 230px;
+        max-width: 300px;
+    }
 }
 
 @media screen and (max-width: 280px) {
@@ -339,5 +360,13 @@ body.dark-mode {
 
     .focus-btn-panagi {
         outline: 2px solid #52ff42;
+    }
+
+    .yts-embed {
+        height: 400px;
+    }
+
+    .emb-my-web {
+        width: 230px;
     }
 }  

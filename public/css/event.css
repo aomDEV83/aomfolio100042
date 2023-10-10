@@ -199,6 +199,11 @@ body.dark-mode {
     #scroll-top, #scroll-bottom {
         width: 30px;
     }
+
+    .emb-my-web {
+        width: 230px;
+        max-width: 300px;
+    }
 }
 
 @media screen and (max-width: 280px) {
@@ -244,5 +249,9 @@ body.dark-mode {
         width: 25px;
         right: 20px;
         bottom: 20px;
+    }
+
+    .emb-my-web {
+        width: 230px;
     }
 }
