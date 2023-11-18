@@ -44,7 +44,7 @@ $(document).ready(function() {
 
         $('.even-course').css({'background-color': '#181818'});
 
-        $('#course-y_1-t_1 button').css({'color': '#222'});
+        $('#portfolio-y1 button').css({'color': '#222'});
 
         $('hr').hide();
 
